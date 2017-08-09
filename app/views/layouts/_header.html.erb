@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "B$ Blog", root_path, id: "home_button" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <% if !current_user %>
+          <li><%= link_to "Log In", login_path %></li>
+        <% else %>
+          <li><%= link_to "Log Out", logout_path, method: :delete %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
