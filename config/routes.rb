@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :users
+  resources :blogs
 
   root 'static_pages#home'
 
@@ -10,5 +11,6 @@ Rails.application.routes.draw do
   post  '/login', to: 'user_sessions#create'
   delete '/logout', to: 'user_sessions#destroy'
 
-
+  get '/create_blog', to: 'blogs#new'
+  post '/create_blog', to: 'blogs#create'
 end

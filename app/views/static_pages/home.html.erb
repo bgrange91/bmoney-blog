@@ -1,5 +1,8 @@
-<h1>Sample App</h1>
-<p>
-  Welcome to the B$ Blog
-</p>
-<%= link_to "Sign Up", signup_path, class: "btn btn-lg btn-primary" %>
+<% if !current_user %>
+	<h1>
+	  Welcome to the B$ Blog
+	</h1>
+	<%= link_to "Sign Up", signup_path, class: "btn btn-lg btn-primary" %>
+<% else %>
+	<%= link_to "Create a Blog", create_blog_path, class: "btn btn-lg btn-primary" %>
+<% end %>

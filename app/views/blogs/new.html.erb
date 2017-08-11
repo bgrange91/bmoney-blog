@@ -1,0 +1,15 @@
+<% provide(:title, 'Create Your Blog') %>
+<h1 class="center">Create Your Blog</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@blog, url: create_blog_path) do |f| %>
+    	<%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.text_field :name, placeholder: "Name" %>
+      <%= f.text_field :description, placeholder: "Description" %>
+      <%= f.label :visible %>
+      <%= f.check_box :visible, class: "blog_visibility" %>
+      <%= f.submit "Create Blog", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
