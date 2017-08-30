@@ -11,7 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'bootstrap-sass', '3.3.7'
+gem 'wysiwyg-rails'
+gem 'sanitize'
 
 group :development, :test do
   gem 'byebug'

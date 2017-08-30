@@ -1,0 +1,11 @@
+<% if @posts.present? %>
+	<% @posts.each do |post| %>
+		<div class="post_wrapper">
+			<h2 class="title"><%= link_to post.title, post %></h2>
+			<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+		</div>
+	<% end %>
+<% else %>
+	<p>You have no posts.</p>
+	<p>Create a new one <%= link_to "here", new_post_path %></p>
+<% end %>
