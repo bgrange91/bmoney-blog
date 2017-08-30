@@ -102,10 +102,21 @@ a {
   .new_signup {
     color: #41c351;
   }
+  .or_login {
+    color: #41c351;
+  }
   #login_form {
     input {
       width: 50%;
     }
+  }
+  #new_user {
+    input {
+      width: 50%;
+    }
+  }
+  .create_post {
+    color: #41c351;
   }
   .post_wrapper {
     padding: 3em;

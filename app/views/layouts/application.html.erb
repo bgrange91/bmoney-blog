@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>B$ Blog</title>
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'application' %>
 </head>
@@ -9,20 +9,21 @@
   <div id="main_content">
     <div id="header">
       <div id="home_button">
-        <%= link_to "Home", root_path %>
+        <%= link_to "B$ Blog", root_path %>
       </div>
+      <div class="buttons">
       <% if !current_user %>
+        <button class="button"><%= link_to "Sign Up", signup_path %></button>
         <button class="button"><%= link_to "Log In", login_path %></button>
       <% end %>
 
       <% if current_user %>
-        <div class="buttons">
-          <button class="button"><%= link_to "Upload Image", "#" %></button>
-          <button class="button"><%= link_to "New Post", new_post_path %></button>
-          <button class="button"><%= link_to "Log Out", logout_path, method: "delete" %></button>
-          <p class="current_name"><%= current_user.name %></p>
-        </div>
+        <button class="button"><%= link_to "Upload Image", "#" %></button>
+        <button class="button"><%= link_to "New Post", new_post_path %></button>
+        <button class="button"><%= link_to "Log Out", logout_path, method: "delete" %></button>
+        <p class="current_name"><%= current_user.name %></p>
       <% end %>
+      </div>
     </div>
 
     <% flash.each do |name, msg| %>

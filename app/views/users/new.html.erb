@@ -2,7 +2,7 @@
 <h1 class="center">Sign up</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3 center">
     <%= form_for(@user, url: signup_path) do |f| %>
       <%= f.text_field :name, placeholder: "Name" %>
       <%= f.email_field :email, placeholder: "Email" %>
@@ -10,5 +10,6 @@
       <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
       <%= f.submit "Create Account", class: "btn btn-primary" %>
     <% end %>
+    <p>Or <%= link_to "Log In Here", login_path, class: "or_login" %></p>
   </div>
 </div>
