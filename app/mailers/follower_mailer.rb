@@ -1,8 +1,6 @@
 class FollowerMailer < ApplicationMailer
-	def new_post(post)
+	def new_post(post, follower)
 		@post = post
-		Follower.all.each do |follower|
-			mail(to: follower.email, subject: 'New Post Added')
-		end
+		mail(to: follower.email, subject: 'New Post Added')
 	end
 end

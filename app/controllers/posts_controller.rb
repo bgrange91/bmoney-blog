@@ -19,7 +19,9 @@ class PostsController < ApplicationController
 		# @hash = AmazonSignature::data_hash
 
 		if @post.save
-			FollowerMailer.new_post(@post).deliver
+			Follower.all.each do |follower|
+				FollowerMailer.new_post(@post, follower).deliver
+			end
 			redirect_to @post
 		else
 			render 'new'
