@@ -1,0 +1,6 @@
+<%= form_for @follower, html: { id: "new_follower" } do |f| %>
+	<%= f.label :email %><br>
+	<%= f.text_field :email %><br>
+	<br>
+	<%= f.submit "Follow Blog" %>
+<% end %>

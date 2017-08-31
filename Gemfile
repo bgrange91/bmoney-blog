@@ -14,6 +14,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'wysiwyg-rails'
 gem 'sanitize'
 
+group :development do
+	gem "letter_opener"
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'spring'

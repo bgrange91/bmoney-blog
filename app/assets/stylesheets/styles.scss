@@ -42,6 +42,22 @@ a {
   text-decoration: none;
 }
 
+#errors {
+  width: 50%;
+  margin-bottom: 1em;
+  border: 1px solid #f00;
+  border-radius: 4px;
+  ul {
+    padding-left: 1em;
+    list-style: none;
+  }
+}
+.alert {
+  width: 50%;
+  border: 1px solid #41c351;
+  border-radius: 4px;
+}
+
 .new_comment {
   input[type="submit"] {
     width: 50%;
@@ -111,6 +127,11 @@ a {
     }
   }
   #new_user {
+    input {
+      width: 50%;
+    }
+  }
+  #new_follower {
     input {
       width: 50%;
     }

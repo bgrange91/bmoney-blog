@@ -7,7 +7,7 @@
 			<%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' }, class: "post_action" %>
 	  <% end %>
 	</p>
-	<div class="body fr-view"><%= @post.body.html_safe %></div>
+	<div class="body fr-view"><%= @post.body %></div>
 
 	<div id="comments">
 		<h2><%= @post.comments.count %> Comments</h2>

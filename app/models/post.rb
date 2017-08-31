@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
 	validates :title, presence: true
 	validates :body,  presence: true
 
-	before_save :sanitize_body
+	# before_save :sanitize_body
 
 	def sanitize_body
 		Sanitize.fragment(body, Sanitize::Config::RELAXED)
